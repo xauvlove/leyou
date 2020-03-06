@@ -7,6 +7,7 @@ import com.leyou.item.vo.SpuVO;
 import com.leyou.search.client.GoodsClient;
 import com.leyou.search.pojo.Goods;
 import com.leyou.search.service.SearchService;
+import org.aspectj.lang.annotation.Aspect;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,11 +23,13 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Aspect
 public class GoodsRepositoryTest {
 
     @Autowired
@@ -60,6 +63,18 @@ public class GoodsRepositoryTest {
     }
 
     @Test
+    public void test4() {
+        Iterable<Goods> all = goodsRepository.findAll();
+        Iterator<Goods> iterator = all.iterator();
+        int i=0;
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+            i++;
+        }
+        System.out.println(i);
+    }
+
+    @Test
     public void test2() throws Exception{
         int page = 1;
         int rows = 100;
@@ -74,13 +89,11 @@ public class GoodsRepositoryTest {
             List<Goods> goodsList = new ArrayList<>(spuVOList.size());
             for (SpuVO spuVO : spuVOList) {
                 Spu spu = tToKUtil.transferTToK(spuVO, Spu.class);
-                String json = searchService.buildEasyGoodsForSearch(spu);
-                String res = post(url, json);
-                System.out.println(res);
-                //goodsList.add(goods);
+                Goods goods = searchService.buildGoods(spu);
+                goodsList.add(goods);
             }
 
-            //goodsRepository.saveAll(goodsList);
+            goodsRepository.saveAll(goodsList);
             page ++;
             size = spuVOList.size();
         } while(size == rows);

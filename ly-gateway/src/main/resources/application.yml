@@ -14,6 +14,7 @@ zuul:
   prefix: /api #路由匹配前缀
   routes:
     item-service: /item/**
+    search-service: /search/**
     upload-servive:
       path: /upload/**
       serviceId: upload-service
