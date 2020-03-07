@@ -89,7 +89,7 @@ public class GoodsRepositoryTest {
             List<Goods> goodsList = new ArrayList<>(spuVOList.size());
             for (SpuVO spuVO : spuVOList) {
                 Spu spu = tToKUtil.transferTToK(spuVO, Spu.class);
-                Goods goods = searchService.buildGoods(spu);
+                Goods goods = searchService.buildEasyGoodsForSearch(spu);
                 goodsList.add(goods);
             }
 

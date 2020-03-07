@@ -162,7 +162,7 @@ public class SearchService {
         return result;
     }
 
-    public String buildEasyGoodsForSearch(Spu spu) throws FileNotFoundException {
+    public Goods buildEasyGoodsForSearch(Spu spu) throws FileNotFoundException {
 
         Brand brand = brandClient.queryBrandById(spu.getBrandId());
         if(brand == null) {
@@ -195,11 +195,27 @@ public class SearchService {
         String skuStr = JsonUtils.serialize(skus).replaceAll("\"", "");
         String subTitle = spu.getSubTitle().replaceAll("\"", "");
 
+        Set<Long> priceSet = skuList.stream().map(Sku::getPrice).collect(Collectors.toSet());
+        if(CollectionUtils.isEmpty(priceSet)) {
+            priceSet = new HashSet<>();
+            priceSet.add(-1L);
+        }
+
         Goods goods = new Goods();
 
+        goods.setBrandId(spu.getBrandId());
+        goods.setCid1(spu.getCid1());
+        goods.setCid2(spu.getCid2());
+        goods.setCid3(spu.getCid3());
+        goods.setCreateTime(spu.getCreateTime());
+        goods.setId(spu.getId());
+        goods.setSubTitle(spu.getSubTitle());
+        goods.setPrice(priceSet);
+        goods.setSkus(JsonUtils.serialize(skus));
+        HashMap<String, Object> hashMap = new HashMap<>();
+        hashMap.put("未知规格", "未知规格值");
+        goods.setSpecs(hashMap);
         goods.setAll(all);
-        goods.setSubTitle(subTitle);
-        goods.setSkus(skuStr);
 
 
         String str = "{\r\n\"all\":\"" + all+"\",\r\n"
@@ -210,7 +226,7 @@ public class SearchService {
         pw.println(str);
         pw.flush();
         pw.close();
-        return str;
+        return goods;
     }
 
     public PageResult<Goods> search(SearchRequest searchRequest) {

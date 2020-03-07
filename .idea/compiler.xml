@@ -7,13 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ly-common" />
+        <module name="lygateway" />
         <module name="ly-item-service" />
         <module name="lyregistry" />
         <module name="ly-upload" />
         <module name="ly-item-interface" />
         <module name="ly-search" />
-        <module name="lygateway" />
+        <module name="ly-common" />
       </profile>
     </annotationProcessing>
   </component>
