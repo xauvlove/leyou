@@ -3,6 +3,7 @@ package com.leyou.item.web;
 import com.leyou.item.pojo.SpecGroup;
 import com.leyou.item.pojo.SpecParam;
 import com.leyou.item.sevice.SpecificationService;
+import com.leyou.item.vo.SpecGroupVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -61,5 +62,15 @@ public class SpecificationController {
     public ResponseEntity<Void> saveSpecParam(@RequestBody SpecParam specParam) {
         specificationService.saveSpecParam(specParam);
         return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+
+    /**
+     * 根据分类查组内参数
+     * @param cid
+     * @return
+     */
+    @GetMapping("/spec/group")
+    public ResponseEntity<List<SpecGroupVO>> queryListByCid(@RequestParam("cid") Long cid) {
+        return ResponseEntity.ok(specificationService.queryListByCid(cid));
     }
 }

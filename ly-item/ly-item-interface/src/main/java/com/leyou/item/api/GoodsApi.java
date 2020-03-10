@@ -2,6 +2,7 @@ package com.leyou.item.api;
 
 import com.leyou.common.vo.PageResult;
 import com.leyou.item.pojo.Sku;
+import com.leyou.item.pojo.Spu;
 import com.leyou.item.pojo.SpuDetail;
 import com.leyou.item.vo.SpuVO;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,4 +28,8 @@ public interface GoodsApi {
             @RequestParam(value = "rows", defaultValue = "5") Integer rows,
             @RequestParam(value = "saleable", required = false) Boolean saleable,
             @RequestParam(value = "key", required = false) String key);
+
+    @GetMapping("/spu/{id}")
+    Spu querySpuById(@PathVariable("id") Long id);
+
 }

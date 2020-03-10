@@ -1,6 +1,6 @@
-2020-03-07 13:51:59.522  INFO 852 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@512baff6: startup date [Sat Mar 07 13:51:59 CST 2020]; root of context hierarchy
-2020-03-07 13:51:59.844  INFO 852 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-2020-03-07 13:51:59.906  INFO 852 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2b3ddb0c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-10 09:37:00.109  INFO 10024 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@76a2ddf3: startup date [Tue Mar 10 09:37:00 CST 2020]; root of context hierarchy
+2020-03-10 09:37:00.309  INFO 10024 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-03-10 09:37:00.339  INFO 10024 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$afefe999] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -10,96 +10,246 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.0.4.RELEASE)
 
-2020-03-07 13:52:00.313  INFO 852 --- [           main] com.leyou.LyItemApplication              : No active profile set, falling back to default profiles: default
-2020-03-07 13:52:00.329  INFO 852 --- [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@74a9c4b0: startup date [Sat Mar 07 13:52:00 CST 2020]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@512baff6
-2020-03-07 13:52:00.871  WARN 852 --- [           main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.leyou]' package. Please check your configuration.
-2020-03-07 13:52:00.887  WARN 852 --- [           main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.leyou]' package. Please check your configuration.
-2020-03-07 13:52:01.201  INFO 852 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=refresh; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=false; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]] with [Root bean: class [org.springframework.aop.scope.ScopedProxyFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in BeanDefinition defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]]
-2020-03-07 13:52:01.328  INFO 852 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f42f0f04-0c07-3418-885d-52d061c41955
-2020-03-07 13:52:01.374  INFO 852 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-2020-03-07 13:52:01.531  INFO 852 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f23d80f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-03-07 13:52:01.581  INFO 852 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2b3ddb0c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-03-07 13:52:02.267  INFO 852 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2020-03-07 13:52:02.290  INFO 852 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-03-07 13:52:02.290  INFO 852 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
-2020-03-07 13:52:02.296  INFO 852 --- [ost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\apps\java\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\apps\java\bin;D:\apps\nodejs\;D:\apps\Git\cmd;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;.]
-2020-03-07 13:52:02.400  INFO 852 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-03-07 13:52:02.400  INFO 852 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2071 ms
-2020-03-07 13:52:02.486  INFO 852 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2020-03-07 13:52:02.491  INFO 852 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2020-03-07 13:52:02.491  INFO 852 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2020-03-07 13:52:02.491  INFO 852 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2020-03-07 13:52:02.491  INFO 852 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-03-10 09:37:00.557  INFO 10024 --- [           main] com.leyou.LyItemApplication              : No active profile set, falling back to default profiles: default
+2020-03-10 09:37:00.570  INFO 10024 --- [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4ced35ed: startup date [Tue Mar 10 09:37:00 CST 2020]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@76a2ddf3
+2020-03-10 09:37:00.921  WARN 10024 --- [           main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.leyou]' package. Please check your configuration.
+2020-03-10 09:37:00.931  WARN 10024 --- [           main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.leyou]' package. Please check your configuration.
+2020-03-10 09:37:01.046  INFO 10024 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=refresh; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=false; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]] with [Root bean: class [org.springframework.aop.scope.ScopedProxyFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in BeanDefinition defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]]
+2020-03-10 09:37:01.118  INFO 10024 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f42f0f04-0c07-3418-885d-52d061c41955
+2020-03-10 09:37:01.132  INFO 10024 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-03-10 09:37:01.218  INFO 10024 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$93d5e69c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-10 09:37:01.240  INFO 10024 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$afefe999] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-10 09:37:01.493  INFO 10024 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-03-10 09:37:01.509  INFO 10024 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-10 09:37:01.509  INFO 10024 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2020-03-10 09:37:01.512  INFO 10024 --- [ost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\apps\java\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\apps\java\bin;D:\apps\nodejs\;D:\apps\Git\cmd;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;.]
+2020-03-10 09:37:01.588  INFO 10024 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-10 09:37:01.588  INFO 10024 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1018 ms
+2020-03-10 09:37:01.646  INFO 10024 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2020-03-10 09:37:01.650  INFO 10024 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-03-10 09:37:01.650  INFO 10024 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-03-10 09:37:01.650  INFO 10024 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-03-10 09:37:01.650  INFO 10024 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
 Logging initialized using 'class org.apache.ibatis.logging.stdout.StdOutImpl' adapter.
 Property 'mapperLocations' was not specified or no matching resources found
-2020-03-07 13:52:03.377  WARN 852 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2020-03-07 13:52:03.378  INFO 852 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2020-03-07 13:52:03.387  WARN 852 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2020-03-07 13:52:03.387  INFO 852 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2020-03-07 13:52:03.583  INFO 852 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-03-07 13:52:04.020  INFO 852 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@74a9c4b0: startup date [Sat Mar 07 13:52:00 CST 2020]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@512baff6
-2020-03-07 13:52:04.095  INFO 852 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/brand/page],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.leyou.common.vo.PageResult<com.leyou.item.pojo.Brand>> com.leyou.item.web.BrandController.queryBrandByPage(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.Boolean,java.lang.String)
-2020-03-07 13:52:04.095  INFO 852 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/brand/cid/{cid}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.leyou.item.pojo.Brand>> com.leyou.item.web.BrandController.queryBrandByCid(java.lang.Long)
-2020-03-07 13:52:04.096  INFO 852 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/brand],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.leyou.item.web.BrandController.updateBrand(com.leyou.item.pojo.Brand)
-2020-03-07 13:52:04.096  INFO 852 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/brand/{bid}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.leyou.item.web.BrandController.deleteBrandById(java.lang.Long)
-2020-03-07 13:52:04.096  INFO 852 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/brand/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.leyou.item.pojo.Brand> com.leyou.item.web.BrandController.queryBrandById(java.lang.Long)
-2020-03-07 13:52:04.096  INFO 852 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/brand],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.leyou.item.web.BrandController.saveBrand(com.leyou.item.pojo.Brand,java.util.List<java.lang.Long>)
-2020-03-07 13:52:04.097  INFO 852 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/category/bid/{bid}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.leyou.item.pojo.Brand> com.leyou.item.web.CategoryController.queryBrandByBid(java.lang.Long)
-2020-03-07 13:52:04.098  INFO 852 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/category/list/ids],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.leyou.item.pojo.Category>> com.leyou.item.web.CategoryController.queryCategoryByIds(java.util.List<java.lang.Long>)
-2020-03-07 13:52:04.098  INFO 852 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/category/list],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.leyou.item.pojo.Category>> com.leyou.item.web.CategoryController.queryCategoryByPid(java.lang.Long)
-2020-03-07 13:52:04.099  INFO 852 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spu/page],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.leyou.common.vo.PageResult<com.leyou.item.vo.SpuVO>> com.leyou.item.web.GoodsController.querySpuByPage(java.lang.Integer,java.lang.Integer,java.lang.Boolean,java.lang.String)
-2020-03-07 13:52:04.099  INFO 852 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spu/detail/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.leyou.item.pojo.SpuDetail> com.leyou.item.web.GoodsController.queryDetailById(java.lang.Long)
-2020-03-07 13:52:04.099  INFO 852 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.leyou.item.web.GoodsController.saveGoods(com.leyou.item.vo.SpuVO)
-2020-03-07 13:52:04.099  INFO 852 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sku/list],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.leyou.item.pojo.Sku>> com.leyou.item.web.GoodsController.querySkuBySpuId(java.lang.Long)
-2020-03-07 13:52:04.101  INFO 852 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spec/groups/{cid}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.leyou.item.pojo.SpecGroup>> com.leyou.item.web.SpecificationController.queryGroupByCid(java.lang.Long)
-2020-03-07 13:52:04.101  INFO 852 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spec/param],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.leyou.item.web.SpecificationController.saveSpecParam(com.leyou.item.pojo.SpecParam)
-2020-03-07 13:52:04.101  INFO 852 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spec/params],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.leyou.item.pojo.SpecParam>> com.leyou.item.web.SpecificationController.querySpecParamList(java.lang.Long,java.lang.Long,java.lang.Boolean)
-2020-03-07 13:52:04.103  INFO 852 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2020-03-07 13:52:04.104  INFO 852 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2020-03-07 13:52:04.137  INFO 852 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-03-07 13:52:04.137  INFO 852 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2020-03-07 13:52:04.159  INFO 852 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in commonExceptionHandler
+2020-03-10 09:37:02.288  WARN 10024 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-03-10 09:37:02.288  INFO 10024 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-10 09:37:02.291  WARN 10024 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-03-10 09:37:02.291  INFO 10024 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-10 09:37:02.363  INFO 10024 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-03-10 09:37:02.535  INFO 10024 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4ced35ed: startup date [Tue Mar 10 09:37:00 CST 2020]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@76a2ddf3
+2020-03-10 09:37:02.604  INFO 10024 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/brand/page],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.leyou.common.vo.PageResult<com.leyou.item.pojo.Brand>> com.leyou.item.web.BrandController.queryBrandByPage(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.Boolean,java.lang.String)
+2020-03-10 09:37:02.605  INFO 10024 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/brand],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.leyou.item.web.BrandController.saveBrand(com.leyou.item.pojo.Brand,java.util.List<java.lang.Long>)
+2020-03-10 09:37:02.605  INFO 10024 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/brand],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.leyou.item.web.BrandController.updateBrand(com.leyou.item.pojo.Brand)
+2020-03-10 09:37:02.605  INFO 10024 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/brand/cid/{cid}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.leyou.item.pojo.Brand>> com.leyou.item.web.BrandController.queryBrandByCid(java.lang.Long)
+2020-03-10 09:37:02.606  INFO 10024 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/brand/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.leyou.item.pojo.Brand> com.leyou.item.web.BrandController.queryBrandById(java.lang.Long)
+2020-03-10 09:37:02.606  INFO 10024 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/brand/{bid}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.leyou.item.web.BrandController.deleteBrandById(java.lang.Long)
+2020-03-10 09:37:02.606  INFO 10024 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/category/list/ids],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.leyou.item.pojo.Category>> com.leyou.item.web.CategoryController.queryCategoryByIds(java.util.List<java.lang.Long>)
+2020-03-10 09:37:02.607  INFO 10024 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/category/list],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.leyou.item.pojo.Category>> com.leyou.item.web.CategoryController.queryCategoryByPid(java.lang.Long)
+2020-03-10 09:37:02.607  INFO 10024 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/category/bid/{bid}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.leyou.item.pojo.Brand> com.leyou.item.web.CategoryController.queryBrandByBid(java.lang.Long)
+2020-03-10 09:37:02.608  INFO 10024 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/goods],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.leyou.item.web.GoodsController.saveGoods(com.leyou.item.vo.SpuVO)
+2020-03-10 09:37:02.608  INFO 10024 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spu/detail/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.leyou.item.pojo.SpuDetail> com.leyou.item.web.GoodsController.queryDetailById(java.lang.Long)
+2020-03-10 09:37:02.608  INFO 10024 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spu/page],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.leyou.common.vo.PageResult<com.leyou.item.vo.SpuVO>> com.leyou.item.web.GoodsController.querySpuByPage(java.lang.Integer,java.lang.Integer,java.lang.Boolean,java.lang.String)
+2020-03-10 09:37:02.608  INFO 10024 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sku/list],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.leyou.item.pojo.Sku>> com.leyou.item.web.GoodsController.querySkuBySpuId(java.lang.Long)
+2020-03-10 09:37:02.608  INFO 10024 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spu/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.leyou.item.vo.SpuVO> com.leyou.item.web.GoodsController.querySpuById(java.lang.Long) throws java.lang.Exception
+2020-03-10 09:37:02.609  INFO 10024 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spec/params],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.leyou.item.pojo.SpecParam>> com.leyou.item.web.SpecificationController.querySpecParamList(java.lang.Long,java.lang.Long,java.lang.Boolean)
+2020-03-10 09:37:02.609  INFO 10024 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spec/groups/{cid}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.leyou.item.pojo.SpecGroup>> com.leyou.item.web.SpecificationController.queryGroupByCid(java.lang.Long)
+2020-03-10 09:37:02.609  INFO 10024 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spec/param],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> com.leyou.item.web.SpecificationController.saveSpecParam(com.leyou.item.pojo.SpecParam)
+2020-03-10 09:37:02.610  INFO 10024 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/spec/spec/group],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.leyou.item.vo.SpecGroupVO>> com.leyou.item.web.SpecificationController.queryListByCid(java.lang.Long)
+2020-03-10 09:37:02.611  INFO 10024 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-03-10 09:37:02.612  INFO 10024 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-03-10 09:37:02.639  INFO 10024 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-03-10 09:37:02.639  INFO 10024 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-03-10 09:37:02.653  INFO 10024 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in commonExceptionHandler
 Logging initialized using 'class org.apache.ibatis.logging.stdout.StdOutImpl' adapter.
-2020-03-07 13:52:06.546  INFO 852 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2020-03-07 13:52:06.549  INFO 852 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
-2020-03-07 13:52:06.559  INFO 852 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
-2020-03-07 13:52:06.561  INFO 852 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
-2020-03-07 13:52:06.561  INFO 852 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
-2020-03-07 13:52:06.567  INFO 852 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
-2020-03-07 13:52:06.583  INFO 852 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
-2020-03-07 13:52:06.597  INFO 852 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=74a9c4b0,type=ConfigurationPropertiesRebinder]
-2020-03-07 13:52:06.603  INFO 852 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-2020-03-07 13:52:06.608  INFO 852 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
-2020-03-07 13:52:06.622  INFO 852 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2020-03-07 13:52:06.665  INFO 852 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2020-03-07 13:52:06.797  INFO 852 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2020-03-07 13:52:06.797  INFO 852 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2020-03-07 13:52:06.937  INFO 852 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2020-03-07 13:52:06.937  INFO 852 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2020-03-07 13:52:07.174  INFO 852 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2020-03-07 13:52:07.290  INFO 852 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2020-03-07 13:52:07.290  INFO 852 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2020-03-07 13:52:07.290  INFO 852 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2020-03-07 13:52:07.290  INFO 852 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2020-03-07 13:52:07.290  INFO 852 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2020-03-07 13:52:07.290  INFO 852 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2020-03-07 13:52:07.290  INFO 852 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2020-03-07 13:52:09.772  INFO 852 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2020-03-07 13:52:09.774  INFO 852 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2020-03-07 13:52:09.776  INFO 852 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2020-03-07 13:52:09.779  INFO 852 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1583560329778 with initial instances count: 0
-2020-03-07 13:52:09.784  INFO 852 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application item-service with eureka with status UP
-2020-03-07 13:52:09.784  INFO 852 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1583560329784, current=UP, previous=STARTING]
-2020-03-07 13:52:09.786  INFO 852 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ITEM-SERVICE/Venlexi:item-service:8081: registering service...
-2020-03-07 13:52:09.832  INFO 852 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2020-03-07 13:52:09.833  INFO 852 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
-2020-03-07 13:52:09.837  INFO 852 --- [           main] com.leyou.LyItemApplication              : Started LyItemApplication in 11.23 seconds (JVM running for 12.035)
-2020-03-07 13:52:09.901  INFO 852 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ITEM-SERVICE/Venlexi:item-service:8081 - registration status: 204
-2020-03-07 13:52:39.777  INFO 852 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2020-03-07 13:52:39.777  INFO 852 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2020-03-07 13:52:39.778  INFO 852 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2020-03-07 13:52:39.778  INFO 852 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2020-03-07 13:52:39.778  INFO 852 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2020-03-07 13:52:39.778  INFO 852 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
-2020-03-07 13:52:39.778  INFO 852 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2020-03-07 13:52:39.831  INFO 852 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-03-10 09:37:03.312  INFO 10024 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-03-10 09:37:03.313  INFO 10024 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2020-03-10 09:37:03.320  INFO 10024 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
+2020-03-10 09:37:03.320  INFO 10024 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2020-03-10 09:37:03.321  INFO 10024 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
+2020-03-10 09:37:03.323  INFO 10024 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2020-03-10 09:37:03.332  INFO 10024 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2020-03-10 09:37:03.341  INFO 10024 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=4ced35ed,type=ConfigurationPropertiesRebinder]
+2020-03-10 09:37:03.345  INFO 10024 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2020-03-10 09:37:03.349  INFO 10024 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2020-03-10 09:37:03.357  INFO 10024 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-03-10 09:37:03.384  INFO 10024 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-03-10 09:37:03.483  INFO 10024 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-03-10 09:37:03.484  INFO 10024 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-03-10 09:37:03.572  INFO 10024 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-03-10 09:37:03.572  INFO 10024 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-03-10 09:37:03.740  INFO 10024 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-03-10 09:37:03.797  INFO 10024 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-03-10 09:37:03.797  INFO 10024 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-03-10 09:37:03.797  INFO 10024 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-03-10 09:37:03.797  INFO 10024 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-03-10 09:37:03.797  INFO 10024 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-03-10 09:37:03.797  INFO 10024 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-03-10 09:37:03.797  INFO 10024 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-03-10 09:37:03.942  INFO 10024 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-03-10 09:37:03.944  INFO 10024 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-03-10 09:37:03.945  INFO 10024 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-03-10 09:37:03.948  INFO 10024 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1583804223947 with initial instances count: 1
+2020-03-10 09:37:03.952  INFO 10024 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application item-service with eureka with status UP
+2020-03-10 09:37:03.953  INFO 10024 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1583804223953, current=UP, previous=STARTING]
+2020-03-10 09:37:03.954  INFO 10024 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ITEM-SERVICE/Venlexi:item-service:8081: registering service...
+2020-03-10 09:37:03.981  INFO 10024 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ITEM-SERVICE/Venlexi:item-service:8081 - registration status: 204
+2020-03-10 09:37:03.982  INFO 10024 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2020-03-10 09:37:03.983  INFO 10024 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2020-03-10 09:37:03.985  INFO 10024 --- [           main] com.leyou.LyItemApplication              : Started LyItemApplication in 4.374 seconds (JVM running for 5.089)
+2020-03-10 09:42:03.801  INFO 10024 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-03-10 09:47:03.803  INFO 10024 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-03-10 09:50:44.225  INFO 10024 --- [      Thread-14] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4ced35ed: startup date [Tue Mar 10 09:37:00 CST 2020]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@76a2ddf3
+2020-03-10 09:50:44.225  INFO 10024 --- [      Thread-14] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application item-service with eureka with status DOWN
+2020-03-10 09:50:44.225  WARN 10024 --- [      Thread-14] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1583805044225, current=DOWN, previous=UP]
+2020-03-10 09:50:44.226  INFO 10024 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ITEM-SERVICE/Venlexi:item-service:8081: registering service...
+2020-03-10 09:50:44.227  INFO 10024 --- [      Thread-14] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2020-03-10 09:50:44.228  INFO 10024 --- [      Thread-14] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-03-10 09:50:44.228  INFO 10024 --- [      Thread-14] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2020-03-10 09:50:44.230  INFO 10024 --- [      Thread-14] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-03-10 09:50:44.234  WARN 10024 --- [      Thread-14] .s.c.a.CommonAnnotationBeanPostProcessor : Invocation of destroy method failed on bean with name 'scopedTarget.eurekaClient': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'eurekaInstanceConfigBean': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+2020-03-10 09:50:44.235 ERROR 10024 --- [nfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+
+com.sun.jersey.api.client.ClientHandlerException: org.apache.http.NoHttpResponseException: 127.0.0.1:10086 failed to respond
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.3.jar:1.9.3]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:56) ~[eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:89) ~[eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:829) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.9.3.jar:1.9.3]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_92]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266) [na:1.8.0_92]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) [na:1.8.0_92]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_92]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_92]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_92]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_92]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_92]
+Caused by: org.apache.http.NoHttpResponseException: 127.0.0.1:10086 failed to respond
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.10.jar:4.4.10]
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:286) ~[httpcore-4.4.10.jar:4.4.10]
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.10.jar:4.4.10]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.10.jar:4.4.10]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.6.jar:4.5.6]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 30 common frames omitted
+
+2020-03-10 09:50:44.236  WARN 10024 --- [nfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: org.apache.http.NoHttpResponseException: 127.0.0.1:10086 failed to respond
+2020-03-10 09:50:44.238 ERROR 10024 --- [nfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+
+com.sun.jersey.api.client.ClientHandlerException: org.apache.http.NoHttpResponseException: 127.0.0.1:10086 failed to respond
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.3.jar:1.9.3]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:56) ~[eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:829) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.9.3.jar:1.9.3]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_92]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266) [na:1.8.0_92]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) [na:1.8.0_92]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_92]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_92]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_92]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_92]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_92]
+Caused by: org.apache.http.NoHttpResponseException: 127.0.0.1:10086 failed to respond
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.10.jar:4.4.10]
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:286) ~[httpcore-4.4.10.jar:4.4.10]
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.10.jar:4.4.10]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.10.jar:4.4.10]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:684) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:486) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.6.jar:4.5.6]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.6.jar:4.5.6]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 31 common frames omitted
+
+2020-03-10 09:50:44.239  WARN 10024 --- [nfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: org.apache.http.NoHttpResponseException: 127.0.0.1:10086 failed to respond
+2020-03-10 09:50:44.239  WARN 10024 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ITEM-SERVICE/Venlexi:item-service:8081 - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:829) ~[eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.9.3.jar:1.9.3]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_92]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266) [na:1.8.0_92]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) [na:1.8.0_92]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_92]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_92]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_92]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_92]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_92]
+
+2020-03-10 09:50:44.239  WARN 10024 --- [nfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:829) ~[eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.9.3.jar:1.9.3]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.9.3.jar:1.9.3]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_92]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266) [na:1.8.0_92]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) [na:1.8.0_92]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_92]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_92]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_92]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_92]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_92]
+

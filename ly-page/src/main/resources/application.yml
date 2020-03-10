@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: page-service
+  thymeleaf:
+    cache: false # 如果设置了缓存，需要重启才能访问最新页面，关闭缓存可以直接访问新页面
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+server:
+  port: 8084

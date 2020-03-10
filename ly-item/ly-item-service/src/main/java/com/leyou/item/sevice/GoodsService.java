@@ -192,4 +192,16 @@ public class GoodsService {
         });
         return skuList;
     }
+
+    public SpuVO querySpuVOById(Long id) throws Exception {
+        Spu spu = spuMapper.selectByPrimaryKey(id);
+        if(spu == null) {
+            throw new LyMarketException(LyMarketExceptionEnum.GOODS_NOTFOUND);
+        }
+        List<Sku> skuList = querySkuBySpuId(id);
+        SpuVO spuVO = spuToSpuVOUtil.transferTToK(spu, SpuVO.class);
+        spuVO.setSkus(skuList);
+        spuVO.setSpuDetail(queryDetailById(id));
+        return spuVO;
+    }
 }
