@@ -16,6 +16,8 @@
         <module>ly-search</module>
         <module>ly-page</module>
         <module>ly-smessage</module>
+        <module>ly-user</module>
+        <module>leyou-auth</module>
     </modules>
 
     <packaging>pom</packaging>

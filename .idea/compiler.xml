@@ -7,23 +7,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ly-test" />
-        <module name="lygateway" />
-        <module name="ly-item-service" />
-        <module name="lyregistry" />
-        <module name="ly-upload" />
         <module name="ly-registry" />
-        <module name="ly-item-interface" />
+        <module name="ly-test" />
+        <module name="ly-user-service" />
         <module name="ly-gateway" />
-        <module name="ly-search" />
         <module name="ly-smessage" />
+        <module name="leyou-auth-common" />
+        <module name="ly-item-interface" />
+        <module name="ly-user-interface" />
         <module name="ly-common" />
+        <module name="ly-upload" />
+        <module name="ly-search" />
+        <module name="lyregistry" />
         <module name="ly-page" />
+        <module name="ly-item-service" />
+        <module name="lygateway" />
+        <module name="leyou-auth-service" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8">
-      <module name="ly-sms" target="1.5" />
-      <module name="ly-test" target="1.5" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>

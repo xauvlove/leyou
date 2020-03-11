@@ -1,4 +1,4 @@
-package com.leyou.utils;
+package com.leyou.auth.common.utils;
 
 import com.aliyuncs.DefaultAcsClient;
 import com.aliyuncs.IAcsClient;
@@ -11,7 +11,10 @@ import com.leyou.properties.SmsProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
+import java.util.concurrent.TimeUnit;
 
 @Slf4j
 @Component
@@ -20,14 +23,30 @@ public class SmsUtil {
 
     @Autowired
     private SmsProperties smsProperties;
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
 
     //产品名称:云通信短信API产品,开发者无需替换
     static final String product = "Dysmsapi";
     //产品域名,开发者无需替换
     static final String domain = "dysmsapi.aliyuncs.com";
 
+    private static final String KEY_PREFIX = "sms:phone:";
+    private static final long SMS_MIN_INTERVAL_MILLIS = 60000L;
+
     public SendSmsResponse sendSms(String phoneNumber, String signName,
                                    String templateCode, String templateParam) {
+
+        //限流
+        String key = KEY_PREFIX + phoneNumber;
+        String lastTime = stringRedisTemplate.opsForValue().get(key);
+        if(!StringUtils.isEmpty(lastTime)) {
+            long last = Long.parseLong(lastTime);
+            if(System.currentTimeMillis() - last <= SMS_MIN_INTERVAL_MILLIS) {
+                log.info("[短信服务] 发送短息服务太频繁，手机号码:{}", phoneNumber);
+                return null;
+            }
+        }
         try{
             //可自助调整超时时间
             System.setProperty("sun.net.client.defaultConnectTimeout", "10000");
@@ -63,6 +82,9 @@ public class SmsUtil {
                 log.error("短信发送失败, phone number:{}, 原因:{}",
                         phoneNumber, sendSmsResponse.getMessage());
             }
+            //发送短信成功后 写入redis  过期时间
+            stringRedisTemplate.opsForValue().set(
+                    key, String.valueOf(System.currentTimeMillis()), 1, TimeUnit.MINUTES);
             return sendSmsResponse;
         } catch (Exception e) {
             log.error("短信发送失败, phone number:{}", phoneNumber);

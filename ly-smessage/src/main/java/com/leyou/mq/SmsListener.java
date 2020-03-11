@@ -2,7 +2,7 @@ package com.leyou.mq;
 
 import com.leyou.common.utils.JsonUtils;
 import com.leyou.properties.SmsProperties;
-import com.leyou.utils.SmsUtil;
+import com.leyou.auth.common.utils.SmsUtil;
 import org.springframework.amqp.core.ExchangeTypes;
 import org.springframework.amqp.rabbit.annotation.Exchange;
 import org.springframework.amqp.rabbit.annotation.Queue;

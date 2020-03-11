@@ -8,10 +8,15 @@ spring:
     host: 127.0.0.1
     username: leyou
     password: 521410
+  redis:
+    host: 127.0.0.1
+
 ly:
   sms:
     accessKeyId: 123
     accessKeySecret: accessKeySecret
     signName: 商城
     verifyCodeTemplate: verifyCodeTemplate
+
+
 
