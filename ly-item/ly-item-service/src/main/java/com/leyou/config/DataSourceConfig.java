@@ -36,7 +36,7 @@ public class DataSourceConfig {
         return dataSourceProperties;
     }*/
 
-    @Bean
+    /*@Bean
     public DataSource getMyDataSource() {
         return DataSourceBuilder.create()
                 .username("root")
@@ -44,5 +44,5 @@ public class DataSourceConfig {
                 .url("jdbc:mysql://localhost:3306/yun6")
                 .driverClassName("com.mysql.jdbc.Driver")
                 .build();
-    }
+    }*/
 }

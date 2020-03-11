@@ -247,4 +247,15 @@ public class SearchService {
         List<Goods> goodsList = result.getContent();
         return new PageResult<>(total, pages, goodsList);
     }
+
+    public void createOrUpdateIndex(Long spuId) {
+        // 构建goods对象
+        Spu spu = goodsClient.querySpuById(spuId);
+        Goods goods = buildGoods(spu);
+        goodsRepository.save(goods);
+    }
+
+    public void deleteIndex(Long spuId) {
+        goodsRepository.deleteById(spuId);
+    }
 }

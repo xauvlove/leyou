@@ -119,7 +119,7 @@
                     <li>
                         <a href="#" th:text="${brand.name}">Apple</a>
                     </li>
-                    <li class="active" th:text="${spu.title}">Apple iPhone 6s</li>
+                    <li class="active" th:text="${title}">Apple iPhone 6s</li>
                 </ul>
             </div>
             <!--product-info-->
@@ -151,9 +151,9 @@
                 </div>
                 <div class="fr itemInfo-wrap">
                     <div class="sku-name">
-                        <h4 th:text="${spu.title}"></h4>
+                        <h4 th:text="${title}"></h4>
                     </div>
-                    <div class="news"><span th:utext="${spu.subTitle}">推荐选择下方[移动优惠购],手机套餐齐搞定,不用换号,每月还有花费返</span></div>
+                    <div class="news"><span th:utext="${subTitle}">推荐选择下方[移动优惠购],手机套餐齐搞定,不用换号,每月还有花费返</span></div>
                     <div class="summary">
                         <div class="summary-wrap">
                             <div class="fl title"><i>价　　格</i></div>

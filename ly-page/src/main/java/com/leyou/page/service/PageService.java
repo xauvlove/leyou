@@ -9,15 +9,20 @@ import com.leyou.page.client.BrandClient;
 import com.leyou.page.client.CategoryClient;
 import com.leyou.page.client.GoodsClient;
 import com.leyou.page.client.SpecificationClient;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import org.thymeleaf.TemplateEngine;
+import org.thymeleaf.context.Context;
+import java.io.File;
+import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 @Service
+@Slf4j
 public class PageService {
 
     @Autowired
@@ -32,6 +37,9 @@ public class PageService {
     @Autowired
     private SpecificationClient specificationClient;
 
+    @Autowired
+    private TemplateEngine templateEngine;
+
     public Map<String, Object> loadModel(Long spuId) {
 
         Spu spu = goodsClient.querySpuById(spuId);
@@ -41,7 +49,6 @@ public class PageService {
 
         categoryClient.queryCategoryByIds(Arrays.asList(
                 spu.getCid1(), spu.getCid2(), spu.getCid3()));
-        List<SpecGroupVO> specGroupVOS = specificationClient.queryGroupByCid(spu.getCid3());
 
         Map<String, Object> model = new HashMap<String, Object>();
         model.put("title", spu.getTitle());
@@ -49,8 +56,40 @@ public class PageService {
         model.put("skus", skuList);
         model.put("detail", spuDetail);
         model.put("brand", brand);
-        model.put("specs", specGroupVOS);
+        try{
+            List<SpecGroupVO> specGroupVOS = specificationClient.queryGroupByCid(spu.getCid3());
+            model.put("specs", specGroupVOS);
+        } catch (Exception e) {
+            e.printStackTrace();
+            model.put("specs", "specGroupVOS");
+        }
 
         return model;
+    }
+
+    public void createHtml(Long spuId) {
+        //上下文
+        Context context = new Context();
+        context.setVariables(loadModel(spuId));
+        //输出流
+        String path = "D:\\apps\\java-develop\\workspace\\leyou-html";
+        File dest = new File(path, spuId + ".html");
+        if(dest.exists()) {
+            dest.delete();
+        }
+        try(PrintWriter writer = new PrintWriter(dest, "UTF-8")) {
+            //生成html
+            templateEngine.process("item", context, writer);
+        } catch (Exception e) {
+            log.error("生成静态页异常", e);
+        }
+    }
+
+    public void deleteHtml(Long spuId) {
+        String path = "D:\\apps\\java-develop\\workspace\\leyou-html";
+        File dest = new File(path, spuId + ".html");
+        if(dest.exists()) {
+            dest.delete();
+        }
     }
 }

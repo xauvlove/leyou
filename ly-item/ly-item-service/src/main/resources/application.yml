@@ -7,6 +7,19 @@ spring:
     url: jdbc:mysql://localhost:3306/yun6
     username: root
     password: 521410
+  rabbitmq:
+    host: 127.0.0.1
+    username: leyou
+    password: 521410
+    virtual-host: /leyou
+    template:
+      retry:
+        enabled: true
+        initial-interval: 10000ms # 失败10秒重试
+        max-interval: 30000ms # 最大重试时间
+        multiplier: 2 # 重试周期
+      exchange: ly.item.exchange
+    publisher-confirms: true
 eureka:
   client:
     service-url:

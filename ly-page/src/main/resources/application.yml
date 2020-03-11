@@ -3,6 +3,11 @@ spring:
     name: page-service
   thymeleaf:
     cache: false # 如果设置了缓存，需要重启才能访问最新页面，关闭缓存可以直接访问新页面
+  rabbitmq:
+    host: 127.0.0.1
+    username: leyou
+    password: 521410
+    virtual-host: /leyou
 eureka:
   client:
     service-url:

@@ -16,6 +16,7 @@ import com.leyou.item.pojo.*;
 import com.leyou.item.vo.SpuVO;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -44,6 +45,9 @@ public class GoodsService {
     private SkuMapper skuMapper;
     @Autowired
     private StockMapper stockMapper;
+    @Autowired
+    private AmqpTemplate amqpTemplate;
+
 
     public PageResult<SpuVO> querySpuByPage(Integer page, Integer rows, Boolean saleable, String key) {
         //分页
@@ -160,6 +164,8 @@ public class GoodsService {
             log.error("GoodsService saveGoods");
             throw new LyMarketException(LyMarketExceptionEnum.GOODS_INSERT_FAILED_ERROR);
         }
+        //发送mq消息  生成静态页
+        amqpTemplate.convertAndSend("item.insert", spu.getId());
     }
 
     public SpuDetail queryDetailById(Long id) {
