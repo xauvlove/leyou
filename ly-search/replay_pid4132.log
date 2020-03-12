@@ -5865,13 +5865,13 @@ instanceKlass org/junit/Ignore
 instanceKlass com/intellij/rt/execution/junit/IdeaTestRunner$Repeater
 instanceKlass junit/textui/ResultPrinter
 instanceKlass junit/framework/TestResult
-instanceKlass junit/framework/Test
+instanceKlass junit/framework/MyTest
 instanceKlass junit/runner/BaseTestRunner
 instanceKlass junit/framework/TestListener
 instanceKlass org/junit/runner/notification/RunListener
 instanceKlass com/intellij/junit4/JUnit4IdeaTestRunner
 instanceKlass com/intellij/rt/execution/junit/IdeaTestRunner
-instanceKlass org/junit/Test
+instanceKlass org/junit/MyTest
 instanceKlass com/intellij/rt/execution/junit/RepeatCount
 instanceKlass java/lang/Void
 instanceKlass java/lang/Class$MethodArray
@@ -6185,7 +6185,7 @@ ciInstanceKlass java/lang/System 1 1 369 8 8 8 8 8 8 8 8 8 8 8 8 8 7 1 1 1 1 1 1
 staticfield java/lang/System in Ljava/io/InputStream; java/io/BufferedInputStream
 staticfield java/lang/System out Ljava/io/PrintStream; java/io/PrintStream
 staticfield java/lang/System err Ljava/io/PrintStream; java/io/PrintStream
-instanceKlass org/junit/Test$None
+instanceKlass org/junit/MyTest$None
 instanceKlass java/lang/Exception
 instanceKlass java/lang/Error
 ciInstanceKlass java/lang/Throwable 1 1 327 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 7 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 5 0 7 100 100 100 100 100 100 7 100 100 100 100 7 7 100 7 100 100 100 100 100 100 100 7 7 100 100 100 100 100 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 9 9 9 9 9 9 9 9 9 9 9 9 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 11 11 11 11 11 11 11 11 1 1 1 1 1

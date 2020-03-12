@@ -1,0 +1,4 @@
+ly:
+  jwt:
+    publicKeyPath: D:/apps/java-develop/workspace/leyou-files/rsa.pub
+    cookieName: LY_TOKEN

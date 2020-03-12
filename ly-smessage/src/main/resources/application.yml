@@ -13,8 +13,8 @@ spring:
 
 ly:
   sms:
-    accessKeyId: 123
-    accessKeySecret: accessKeySecret
+    accessKeyId: LTAI4FskspNW8VPWPypEHaMg
+    accessKeySecret: SSHZpISoai8OBLx9OcVAQYo0uMOYZp
     signName: 商城
     verifyCodeTemplate: verifyCodeTemplate
 

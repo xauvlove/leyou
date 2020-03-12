@@ -1,0 +1,7 @@
+ly:
+  jwt:
+    secret: xauvlove@login-key # 登录校验密钥
+    publicKeyPath: D:/apps/java-develop/workspace/leyou-files/rsa.pub
+    privateKeyPath: D:/apps/java-develop/workspace/leyou-files/rsa.pri
+    expiredTime: 30
+    cookieName: LY_TOKEN

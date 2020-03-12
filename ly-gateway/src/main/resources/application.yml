@@ -4,7 +4,17 @@ server:
 spring:
   application:
     name: api-gateway
-
+ # profiles:
+    #include: classpath:application-whitelist.yml
+ly:
+  filter:
+    allowPaths:
+      - /api/auth
+      - /api/search
+      - /api/user/register
+      - /api/user/check
+      - /api/user/code
+      - /api/item
 eureka:
   client:
     service-url:
@@ -15,6 +25,7 @@ zuul:
   routes:
     item-service: /item/**
     user-service: /user/**
+    auth-service: /auth/**
     search-service:
       path: /search/**
       serviceId: search-service
@@ -23,6 +34,8 @@ zuul:
       path: /upload/**
       serviceId: upload-service
       strip-prefix: false #不去除匹配前缀
+  add-host-header: true
+  sensitive-headers: # 覆盖默认敏感头信息
 hystrix:
   command:
     default:
