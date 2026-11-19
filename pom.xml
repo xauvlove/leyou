@@ -98,12 +98,18 @@
     </dependencies>
 
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <!-- 只在可执行服务模块里显式声明该插件；
+                         库模块（ly-common、*-interface、ly-auth-common）没有 main class，
+                         repackage 会失败，所以这里只托管版本，不自动绑定 goal。
+                         版本由 spring-boot-starter-parent 统一管理。 -->
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 
     <!--<pluginRepositories>
