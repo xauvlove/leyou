@@ -24,8 +24,9 @@
 
     <parent>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter</artifactId>
+        <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.0.4.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <properties>
@@ -39,6 +40,13 @@
         <leyou.latest.version>1.0.0-SNAPSHOT</leyou.latest.version>
         <fastDFS.client.version>1.26.1-RELEASE</fastDFS.client.version>
         <com.google.guava.version>19.0</com.google.guava.version>
+        <!-- 托管 hibernate-validator 版本：Boot 2.0.4 默认管理 6.0.11.Final，
+             只在 ly-user-interface 写死版本号对下游服务不生效（传递依赖会被 dependencyManagement 覆盖回 6.0.11）。
+             改这里才能让升级真正作用到所有模块。 -->
+        <hibernate-validator.version>6.2.0.Final</hibernate-validator.version>
+        <!-- Boot 2.0.4 托管的 lombok 1.16.20 无法在 JDK 11+ 上运行（javac 模块化限制），
+             1.18.x 同时兼容 JDK 8 与 JDK 11/17/21。 -->
+        <lombok.version>1.18.30</lombok.version>
     </properties>
 
     <dependencyManagement>
@@ -97,12 +105,18 @@
     </dependencies>
 
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <!-- 只在可执行服务模块里显式声明该插件；
+                         库模块（ly-common、*-interface、ly-auth-common）没有 main class，
+                         repackage 会失败，所以这里只托管版本，不自动绑定 goal。
+                         版本由 spring-boot-starter-parent 统一管理。 -->
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 
     <!--<pluginRepositories>
